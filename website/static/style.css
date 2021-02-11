@@ -1,0 +1,7 @@
+#message_board { 
+    margin: 0 auto;
+    height: 10vh; 
+    width: 10vh;
+    border: 2px solid #ccc;
+    overflow-y: scroll;
+}

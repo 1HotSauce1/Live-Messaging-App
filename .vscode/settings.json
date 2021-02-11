@@ -1,0 +1,12 @@
+{
+    "git.enabled": false,
+    "python.pythonPath": "live_message\\Scripts\\python.exe",
+    "json.schemas": [
+    
+    ],
+    "files.associations": {
+        "*.html": "jinja-html"
+      },
+    "editor.detectIndentation": false,
+    "liveServer.settings.port": 5501
+}
