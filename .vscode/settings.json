@@ -1,6 +1,6 @@
 {
     "git.enabled": false,
-    "python.pythonPath": "live_message\\Scripts\\python.exe",
+    "python.pythonPath": "d:\\College\\coding (Python)\\LiveMessagingApp\\live_message\\Scripts\\python.exe",
     "json.schemas": [
     
     ],
@@ -8,5 +8,5 @@
         "*.html": "jinja-html"
       },
     "editor.detectIndentation": false,
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
 }

@@ -1,7 +1,13 @@
 #message_board { 
     margin: 0 auto;
-    height: 10vh; 
-    width: 10vh;
+    height: 300px; 
+    width: 450px;
+}
+
+#messages { 
+    margin: 0 auto;
+    height: 300px; 
+    width: 450px;
     border: 2px solid #ccc;
     overflow-y: scroll;
 }

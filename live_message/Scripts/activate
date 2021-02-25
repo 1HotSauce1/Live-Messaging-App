@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\Documente\College\coding (Python)\LiveMessagingApp\live_message"
+VIRTUAL_ENV="D:\College\coding (Python)\LiveMessagingApp\live_message"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

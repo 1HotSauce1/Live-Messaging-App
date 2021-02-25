@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=D:\Documente\College\coding (Python)\LiveMessagingApp\live_message
+set VIRTUAL_ENV=D:\College\coding (Python)\LiveMessagingApp\live_message
 
 if not defined PROMPT set PROMPT=$P$G
 

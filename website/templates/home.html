@@ -1,10 +1,5 @@
 {% extends "base.html" %}
 
-{% block external_links %} 
-    <script src="static\index.js"></script>
-    <link rel="stylesheet" href="static\style.css">
-{% endblock %}
-
 {% block title %}Home{% endblock %}
 
 {% block content %}
@@ -15,20 +10,29 @@
             <label for="friend_name">Name of the person:</label>
             <input type="text" id="friend_name" name="friend_name"><br>
 
-            <input type="submit" value="Add friend">
+            <input type="submit" name="action" value="Add friend">
         </form>
     </div><br>
 
     <h4> Friends list: </h4>
-    <ul>
-        {% for friend in friends_list %}
-            <li><button type="button" onclick="show_messages()">{{ friend.name }}</button></li>
-        {% endfor %}
-    </ul>
+    <iframe name="stop_refreshing" style="display:none;"></iframe>
+    <form method="POST" target="stop_refreshing">
+        <ul>
+            {% for friend in friends_list %}
+                <li><input type="submit" onclick="show_messages()" value="{{ friend[0].name }}" name="action"></li>
+            {% endfor %}
+        </ul>
+    </form>
 
-    <form id="message_board" style="display: none;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <form method="POST" id="message_board" style="display: none;" target="stop_refreshing">
+        <div id="messages">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        
         <input type="text" id="message" name="message"><br>
-        <input type="submit" value="Send message">
+        <input type="submit" name="action" value="Send message">
     </form>
 {% endblock %}
